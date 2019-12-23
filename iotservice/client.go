@@ -288,7 +288,7 @@ type Event struct {
 // SubscribeEvents subscribes to D2C events.
 //
 // Event handler is blocking, handle asynchronous processing on your own.
-func (c *Client) SubscribeEvents(ctx context.Context, fn EventHandler) error {
+func (c *Client) SubscribeEvents(ctx context.Context, fn EventHandler, consumerGroup string) error {
 	// a new connection is established for every invocation,
 	// this made on purpose because normally an app calls the method once
 	eh, err := c.connectToEventHub(ctx)
@@ -297,6 +297,10 @@ func (c *Client) SubscribeEvents(ctx context.Context, fn EventHandler) error {
 	}
 	defer eh.Close()
 
+	if consumerGroup == "" {
+		consumerGroup = "$Default"
+	}
+
 	return eh.Subscribe(ctx, func(msg *eventhub.Event) error {
 		if err := fn(&Event{FromAMQPMessage(msg.Message)}); err != nil {
 			return err
@@ -304,6 +308,7 @@ func (c *Client) SubscribeEvents(ctx context.Context, fn EventHandler) error {
 		return msg.Accept()
 	},
 		eventhub.WithSubscribeSince(time.Now()),
+		eventhub.WithSubscribeConsumerGroup(consumerGroup),
 	)
 }
 
