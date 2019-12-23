@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/amenzhinsky/iothub/common"
+	"iothub/common"
 	"pack.ag/amqp"
 )
 

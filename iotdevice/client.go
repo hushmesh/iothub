@@ -7,9 +7,9 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/amenzhinsky/iothub/common"
-	"github.com/amenzhinsky/iothub/iotdevice/transport"
-	"github.com/amenzhinsky/iothub/logger"
+	"iothub/common"
+	"iothub/iotdevice/transport"
+	"iothub/logger"
 )
 
 // ClientOption is a client configuration option.

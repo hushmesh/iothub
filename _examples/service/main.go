@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/amenzhinsky/iothub/iotservice"
+	"iothub/iotservice"
 )
 
 func main() {
