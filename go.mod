@@ -1,4 +1,4 @@
-module github.com/amenzhinsky/iothub
+module github.com/hushmesh/iothub
 
 require (
 	github.com/Azure/azure-sdk-for-go v30.0.0+incompatible // indirect
