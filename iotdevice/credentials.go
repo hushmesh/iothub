@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"iothub/common"
+	"github.com/hushmesh/iothub/common"
 )
 
 type X509Credentials struct {

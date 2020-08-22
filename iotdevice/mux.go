@@ -6,7 +6,7 @@ import (
 	"log"
 	"sync"
 
-	"iothub/common"
+	"github.com/hushmesh/iothub/common"
 )
 
 // once wraps a function that can return an error and

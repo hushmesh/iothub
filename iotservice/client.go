@@ -16,9 +16,9 @@ import (
 	"sync"
 	"time"
 
-	"iothub/common"
-	"iothub/eventhub"
-	"iothub/logger"
+	"github.com/hushmesh/iothub/common"
+	"github.com/hushmesh/iothub/eventhub"
+	"github.com/hushmesh/iothub/logger"
 	"pack.ag/amqp"
 )
 

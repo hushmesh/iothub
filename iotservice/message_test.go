@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"iothub/common"
+	"github.com/hushmesh/iothub/common"
 )
 
 func TestToFromAMQPMessage(t *testing.T) {

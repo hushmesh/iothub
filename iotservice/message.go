@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"iothub/common"
+	"github.com/hushmesh/iothub/common"
 	"pack.ag/amqp"
 )
 

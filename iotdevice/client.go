@@ -7,9 +7,9 @@ import (
 	"errors"
 	"sync"
 
-	"iothub/common"
-	"iothub/iotdevice/transport"
-	"iothub/logger"
+	"github.com/hushmesh/iothub/common"
+	"github.com/hushmesh/iothub/iotdevice/transport"
+	"github.com/hushmesh/iothub/logger"
 )
 
 // ClientOption is a client configuration option.
